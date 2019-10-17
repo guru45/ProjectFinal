@@ -1,0 +1,33 @@
+<body class="bg">
+    <app-mentornav></app-mentornav>
+    <div class="container mt-3 elements" id="cont">
+
+            <div *ngFor="let display of course">
+               
+                <div class="media border p-3 mt-3" style="border-radius: 1rem;  background:lightblue">
+        
+        
+        
+                    <div class="media-body">
+                        <div class="row align-items-center justify-content-center">
+                            <img src="assets/image/java.png" alt="c" class="mr-5 mt-2 rounded-circle"
+                                style="width:60px;">
+                            <h6 class="col-md-2 pt-3"><b>{{display.techName}}</b></h6>
+                            
+                    
+                            <span class="col-md-3 pt-3">Date of Completion : <span><b>{{display.endDate}}</b></span> </span>
+                            <span class="col-md-3 pt-3">Satus : <span><b>{{display.courseStatus}}</b></span> </span>
+                            <button type="button" class="btn btn-success">
+                                    View Detail
+                                      </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+       
+
+
+
+</body>

@@ -1,0 +1,42 @@
+<body class="bg">
+    <app-signup></app-signup>
+    <div class="container ">
+
+
+        <div class="row">
+
+            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                <div id="nav-user" role="tabpanel" aria-labelledby="nav-user-tab" class="col-sm-12 col-md-12 col-lg-12 mx-auto">
+                    <div class="card card-signin my-5 ">
+                        <div class="card-body ">
+                            <h5 class="card-title text-center">Admin Sign In</h5>
+                            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                                <div class="form-group">
+                                    <label for="username">Email</label>
+                                    <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                            <div *ngIf="f.username.errors.required">Email is required</div>
+                                            <div *ngIf="f.username.errors.email">Email must be a valid email address</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                        <div *ngIf="f.password.errors.required">Password is required</div>
+                                    </div>
+                                </div><br>
+                                <div class="form-group" style="text-align: center">
+                                    <button [disabled]="loading" class="btn btn-success">
+                                        Login
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>

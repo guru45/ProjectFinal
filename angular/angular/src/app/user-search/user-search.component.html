@@ -1,0 +1,67 @@
+<app-search-header></app-search-header>
+
+<body class="bg">
+
+    <div class="container-fluid  ">
+
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-4 pt-3">
+                <div class="form-group ">
+                    <input type="text" id="textSearch" class="form-control" placeholder="Search Trainers" autofocus>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-1.5 pt-3">
+                <div class="form-group">
+                    <select id="timeSlot" class="form-control">
+                            <option selected>Time Slot</option>
+                            <option>7am-9am</option>
+                            <option>4pm-6pm</option>
+                            <option>6pm-8pm</option>
+    
+                        </select>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <button style="background-color: #3b3a37; color: white" type="button" class="btn "><span class="fa fa-search"></span></button>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+
+<div class="card my-5">
+        <div class="card-body">
+          <table class="table table-hover" id="myTable" height="100"  style="background:rgb(199, 177, 82)" *ngIf="search1" >
+            <thead class="thead-dark">
+              <tr style="background-color: crimson">
+                <th>Profile</th>
+                <th>Mentor Name</th>
+                <th>skills</th>
+                <th>Qualification</th>
+                
+                
+                <th>Duration</th>
+                <th>Propose</th>
+      
+            </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let one of search1">
+             <td><img src="assets/image/index.png" class="mr-2 mt-2 rounded-circle" style="width:60px;"></td>
+                <td>{{ one.firstname }}</td>
+                <td>{{ one.skills}}</td>
+                <td>{{ one.qualification}}</td>
+               
+                <td>120 Hours</td>
+                <td><form ><button  class="btn btn-danger navbar-btn" routerLink="/login-main">Propose Training</button></form>
+  
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+   </div> 
+   </body>

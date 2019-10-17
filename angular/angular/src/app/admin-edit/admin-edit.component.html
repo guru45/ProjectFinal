@@ -1,0 +1,22 @@
+
+<app-signup></app-signup>
+  
+<section id="blockusers">
+    <br/><br/><br/><h3 class="section-title">Registered Users</h3>
+        <div class="container mt-3">
+            <div class="media border p-3" style="border-radius: 1rem; background-color: #e0e0e0;">
+                <div class="media-body">
+                    <div class="row align-items-center justify-content-center" *ngFor="let display of user">
+                        
+                        <h4 class="col-md-2 pt-3"><b>{{display.firstname}}</b></h4>
+                        
+                        <span class="col-md-2 pt-3"><span></span> </span>
+                        <span class="col-md-3 pt-3"><span></span> </span>
+                        <button type="button" class="btn btn-danger">Block</button><br><br/>
+    
+                    </div>
+                </div>
+            </div>
+    
+        </div><br><br/><br/>
+    </section><br><br/><br/><br><br>

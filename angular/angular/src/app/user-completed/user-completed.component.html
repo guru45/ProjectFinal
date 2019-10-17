@@ -1,0 +1,29 @@
+<body class="bg">
+    <app-usernav></app-usernav>
+    <div class="container mt-3 elements" id="first">
+
+            <div *ngFor="let display of course">
+                <div *ngIf="display.courseStatus=='completed'">
+                <div class="media border p-3 mt-3" style="border-radius: 1rem; background:rgb(199, 177, 82)">
+        
+        
+        
+                    <div class="media-body">
+                        <div class="row align-items-center justify-content-center">
+                            <img src="assets/image/java.png" alt="c" class="mr-5 mt-2 rounded-circle"
+                                style="width:60px;">
+                            <h6 class="col-md-2 pt-3"><b>{{display.techName}}</b></h6>
+                            
+                    <span class="col-md-2 pt-3">Score : <span><b>80%</b></span> </span>
+                            <span class="col-md-3 pt-3">Date of Completion : <span><b>{{display.endDate}}</b></span> </span>
+                            <span class="col-md-3 pt-3">Trainer : <span><b>{{display.mentor}}</b></span> </span>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+       
+</div>
+</body>

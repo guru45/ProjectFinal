@@ -1,0 +1,8 @@
+.bg {
+    background-image: url('../../assets/image/images.png');
+    background-size: cover;
+    padding-bottom: 18.5%;
+}
+#cont{
+    padding-top: 60px;
+}
